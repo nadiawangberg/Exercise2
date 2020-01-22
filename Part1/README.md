@@ -12,6 +12,8 @@
 ### What is the difference between a mutex and a binary semaphore?
 > A mutex lock and a binary semaphore are similar in the sence that they only allow one thread accessing the resource at a time. With a Semaphores there is no ownership, the "semaphore" owns the shared resource like a gatekeeper. With mutex each thread has ownership over the resource when it can access it. A mutex can be released (unlocking the resource) only by the thread that had aquired it. A binary semaphore can be signaled by any thread (or process).
 
+Mutex is an object owned by a thread while semaphore is a signaling mechanism. 
+
 ### What is a critical section?
 > If two threads access a shared variable at the same time unexpteced erroneous behaviour might occur. The shared resource needs to be protected so it avoids concurrent access. The protected section is the critical, section a mutex could be used to protect this area. 
 
